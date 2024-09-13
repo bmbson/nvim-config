@@ -2,9 +2,15 @@
 require("config.lazy")
 require("mason").setup()
 
--- lsp shit
+-- lsp shit, kzeg je eerlijk idk hoe dit werkt b.
 require("mason-lspconfig").setup()
 require("lspconfig").eslint.setup({})
+
+-- linting regel dit ooit later ofs.
+-- require("nvim-lint").setup({})
+
+-- vim tidal testing. Je hoeft dit niet te callen vgm.
+-- require("vim-tidal")
 
 -- formatting with conform
 require("conform").setup({
@@ -30,3 +36,6 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.expandtab = True
+
+-- makes nvim follow terminal theming, mostly for transparancy effect tbh.
+vim.cmd([[highlight Normal guibg=none ctermbg=none]])
