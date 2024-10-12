@@ -1,10 +1,19 @@
--- setup lazy.nvim n mason.
+-- setup lazy.nvim eerst.
 require("config.lazy")
-require("mason").setup()
 
--- lsp shit, kzeg je eerlijk idk hoe dit werkt b.
+-- lsp shit, MOET in deze volgorde.
+-- Als je een nieuwe LSP toevoegt voeg een nieuwe require("lspconfig") aan met de LSP server en .setup()
+require("mason").setup()
 require("mason-lspconfig").setup()
+
+-- html css js lsp setup.
 require("lspconfig").eslint.setup({})
+require("lspconfig").html.setup({})
+require("lspconfig").cssls.setup({})
+
+-- latex latex setup.
+require("lspconfig").texlab.setup({})
+require("lspconfig").ltex.setup({})
 
 -- linting regel dit ooit later ofs.
 -- require("nvim-lint").setup({})
