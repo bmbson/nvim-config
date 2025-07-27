@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "checkJs": true,          // Enable type checking in JS files
+    "module": "ESNext",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules"]
+}
+

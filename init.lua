@@ -15,6 +15,9 @@ require("lspconfig").cssls.setup({})
 require("lspconfig").texlab.setup({})
 require("lspconfig").ltex.setup({})
 
+-- typescript-language-server setup.
+require('lspconfig').ts_ls.setup({})
+
 -- linting regel dit ooit later ofs.
 -- require("nvim-lint").setup({})
 
@@ -37,6 +40,19 @@ require("conform").setup({
 	},
 })
 
+require("tokyonight").setup({
+  transparent = true,
+})
+
+require('onedark').setup({
+    style = 'dark',
+		transparent = true,
+})
+
+require('onedark').load()
+
+vim.cmd[[colorscheme onedark]]
+
 -- numbering of lines
 vim.wo.number = true
 
@@ -46,5 +62,6 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.expandtab = True
 
--- makes nvim follow terminal theming, mostly for transparancy effect tbh.
-vim.cmd([[highlight Normal guibg=none ctermbg=none]])
+-- meer kleuren 27-7-2025
+vim.opt.termguicolors = true
+
