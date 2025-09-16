@@ -7,9 +7,10 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 -- html css js lsp setup.
-require("lspconfig").eslint.setup({})
+--require("lspconfig").eslint.setup({})
 require("lspconfig").html.setup({})
 require("lspconfig").cssls.setup({})
+require("lspconfig").ts_ls.setup({})
 
 -- latex latex setup.
 require("lspconfig").texlab.setup({})
@@ -19,8 +20,12 @@ require("lspconfig").ltex.setup({})
 require('lspconfig').ts_ls.setup({})
 
 -- linting regel dit ooit later ofs.
--- require("nvim-lint").setup({})
-
+require('lint').linters_by_ft = {
+  markdown = {'vale'},
+  typescript = {'eslint_d'},
+  javascript = {'eslint_d'},
+  css = {'stylelint'}
+}
 -- vim tidal testing. Je hoeft dit niet te callen vgm.
 -- require("vim-tidal")
 
